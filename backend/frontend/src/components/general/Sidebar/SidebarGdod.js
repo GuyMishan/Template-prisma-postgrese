@@ -101,37 +101,7 @@ function SidebarGdod(props) {
           </NavLink>
         </li>
         <li>
-          <div style={{ padding: "1px 8px", cursor: 'pointer' }} onClick={props.Togglemodularscreensmodal}>
-            <Row style={{ direction: "rtl" }}>
-              <Col xs={12} md={3} style={{ paddingLeft: "0px", textAlign: 'center', alignSelf: 'center' }}>
-                {props.theme == 'white' ? <img src={screensicon} style={{ height: "20px" }}></img>
-                  : <img src={screensicon_white} style={{ height: "20px" }}></img>}
-              </Col>
-              <Col xs={12} md={9} style={{ paddingRight: "0px" }}>
-                <h4 style={{ margin: "0px", paddingTop: '6px', paddingBottom: '6px' }}>
-                  המסכים שלי
-                </h4>
-              </Col>
-            </Row>
-          </div>
-        </li>
-        <li>
-          <NavLink to={`/zminotpage/gdod/${user.gdodid}/magadal/0/false/false`} style={{ margin: '0px' }} activeClassName="sidebar_active_link">
-            <Row style={{ direction: "rtl" }}>
-              <Col xs={12} md={3} style={{ paddingLeft: "0px", textAlign: 'center', alignSelf: 'center' }}>
-                {props.theme == 'white' ? <img src={table} style={{ height: "20px" }}></img>
-                  : <img src={table_white} style={{ height: "20px" }}></img>}
-              </Col>
-              <Col xs={12} md={9} style={{ paddingRight: "0px" }}>
-                <h4 style={{ margin: "0px", paddingTop: '6px', paddingBottom: '6px' }}>
-                  דיווח זמינות
-                </h4>
-              </Col>
-            </Row>
-          </NavLink>
-        </li>
-        {/* <li>
-          <NavLink to={`/statisticspage/gdod/${user.gdodid}/magadal/0`} style={{ margin: '0px' }} activeClassName="sidebar_active_link">
+          <NavLink to={`/statisticspage`} style={{ margin: '0px' }} activeClassName="sidebar_active_link">
             <Row style={{ direction: "rtl" }}>
               <Col xs={12} md={3} style={{ paddingLeft: "0px", textAlign: 'center', alignSelf: 'center' }}>
                 {props.theme == 'white' ? <img src={graphpic} style={{ height: "20px" }}></img>
@@ -140,51 +110,6 @@ function SidebarGdod(props) {
               <Col xs={12} md={9} style={{ paddingRight: "0px" }}>
                 <h4 style={{ margin: "0px", paddingTop: '6px', paddingBottom: '6px' }}>
                   סטטיסטיקות
-                </h4>
-              </Col>
-            </Row>
-          </NavLink>
-        </li> */}
-        <li>
-          <NavLink to={`/subunitsrecentfeedspage/gdod/${user.gdodid}/magadal/0`} style={{ margin: '0px' }} activeClassName="sidebar_active_link">
-            <Row style={{ direction: "rtl" }}>
-              <Col xs={12} md={3} style={{ paddingLeft: "0px", textAlign: 'center', alignSelf: 'center' }}>
-                {props.theme == 'white' ? <img src={shortlist} style={{ height: "20px" }}></img>
-                  : <img src={shortlist_white} style={{ height: "20px" }}></img>}
-              </Col>
-              <Col xs={12} md={9} style={{ paddingRight: "0px" }}>
-                <h4 style={{ margin: "0px", paddingTop: '6px', paddingBottom: '6px' }}>
-                  תקינות הזנות
-                </h4>
-              </Col>
-            </Row>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to={`/zminotpage/notype/0/magadal/0/false/false`} style={{ margin: '0px' }} activeClassName="sidebar_active_link">
-            <Row style={{ direction: "rtl" }}>
-              <Col xs={12} md={3} style={{ paddingLeft: "0px", textAlign: 'center', alignSelf: 'center' }}>
-                {props.theme == 'white' ? <img src={table} style={{ height: "20px" }}></img>
-                  : <img src={table_white} style={{ height: "20px" }}></img>}
-              </Col>
-              <Col xs={12} md={9} style={{ paddingRight: "0px" }}>
-                <h4 style={{ margin: "0px", paddingTop: '6px', paddingBottom: '6px' }}>
-                  כלים ללא יחידה
-                </h4>
-              </Col>
-            </Row>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to={`/zminotpage/gdod/${user.gdodid}/magadal/0/true/false`} style={{ margin: '0px' }} activeClassName="sidebar_active_link">
-            <Row style={{ direction: "rtl" }}>
-              <Col xs={12} md={3} style={{ paddingLeft: "0px", textAlign: 'center', alignSelf: 'center' }}>
-                {props.theme == 'white' ? <img src={table} style={{ height: "20px" }}></img>
-                  : <img src={table_white} style={{ height: "20px" }}></img>}
-              </Col>
-              <Col xs={12} md={9} style={{ paddingRight: "0px" }}>
-                <h4 style={{ margin: "0px", paddingTop: '6px', paddingBottom: '6px' }}>
-                  כלים מושבתים
                 </h4>
               </Col>
             </Row>

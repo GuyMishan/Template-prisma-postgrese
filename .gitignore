@@ -4,7 +4,6 @@
 /frontend/.vscode
 /frontend/.eslintcache
 
-
 /backend/node_modules
 /backend/package-lock.json
 

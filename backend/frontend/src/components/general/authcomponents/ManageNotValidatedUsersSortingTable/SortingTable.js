@@ -4,7 +4,7 @@ import { withRouter, Redirect, Link } from "react-router-dom";
 import { COLUMNS } from "./coulmns";
 import { GlobalFilter } from './GlobalFilter'
 import axios from 'axios'
-import style from 'components/Table.css'
+import style from 'assets/css/Table.css'
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 import ManageUsersFilter from "components/bazak/Filters/ManageUsersFilter";
 

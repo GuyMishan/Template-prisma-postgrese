@@ -44,14 +44,10 @@ import SidebarOgda from 'components/general/Sidebar/SidebarOgda';
 import SidebarPikod from 'components/general/Sidebar/SidebarPikod';
 import SidebarGeneral from 'components/general/Sidebar/SidebarGeneral';
 import { signout } from "auth/index";
-//
-import ModularScreensModal from 'components/bazak/ModularScreensModals/ModularScreensModal/ModularScreensModal';
 
 function Sidebar() {
   const [color, setcolor] = useState("transparent");
   const { user } = isAuthenticated()
-  //modularscreens modal
-  const [ismodularscreensmodalopen, setIsmodularscreensmodalopen] = useState(false);
   
   const clickSubmit = (event) => {
     event.preventDefault();
@@ -65,14 +61,8 @@ function Sidebar() {
     }
   };
 
-  function Togglemodularscreensmodal(evt) {
-    setIsmodularscreensmodalopen(!ismodularscreensmodalopen);
-  }
-
   return (
     <>
-      <ModularScreensModal isOpen={ismodularscreensmodalopen} Togglemodularscreensmodal={Togglemodularscreensmodal} user={user} />
-
       <ThemeContext.Consumer>
         {({ changeTheme, theme }) => (
           theme == "white-content" ?
@@ -83,17 +73,17 @@ function Sidebar() {
 
       <div className="sidebar" style={{ background: color, marginTop: '60px', boxShadow: 'none', borderRadius: '0px', borderLeft: '1px solid lightgray' }}>
         <div className="sidebar-wrapper" style={{ overflow: 'hidden' }}>
-          {user.role === "0" ? <SidebarAdmin theme={color} Togglemodularscreensmodal={Togglemodularscreensmodal}/> :
+          {user.role === "0" ? <SidebarAdmin theme={color}/> :
 
-            user.role === "1" ? <SidebarGdod theme={color} Togglemodularscreensmodal={Togglemodularscreensmodal}/> :
+            user.role === "1" ? <SidebarGdod theme={color}/> :
 
-              user.role === "2" ? <SidebarHativa theme={color} Togglemodularscreensmodal={Togglemodularscreensmodal}/> :
+              user.role === "2" ? <SidebarHativa theme={color}/> :
 
-                user.role === "3" ? <SidebarOgda theme={color} Togglemodularscreensmodal={Togglemodularscreensmodal}/> :
+                user.role === "3" ? <SidebarOgda theme={color}/> :
 
-                  user.role === "4" ? <SidebarPikod theme={color} Togglemodularscreensmodal={Togglemodularscreensmodal}/> :
+                  user.role === "4" ? <SidebarPikod theme={color}/> :
 
-                   user.role === "5" ? <SidebarGeneral theme={color} Togglemodularscreensmodal={Togglemodularscreensmodal}/> : null
+                   user.role === "5" ? <SidebarGeneral theme={color}/> : null
           }
           <div style={{ textAlign: 'center', position: 'absolute', bottom: 0, width: '100%', marginBottom: '15px' }}>
             {color == 'white' ? <img src={Logo100} style={{ height: "100px" }}></img>

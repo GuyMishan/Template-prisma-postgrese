@@ -4,17 +4,16 @@ import { withRouter, Redirect, Link } from "react-router-dom";
 import { COLUMNS } from "./coulmns";
 import { GlobalFilter } from './GlobalFilter'
 import axios from 'axios'
-import style from 'components/Table.css'
+import style from 'assets/css/Table.css'
 import { signin, authenticate, isAuthenticated } from 'auth/index';
 import PropagateLoader from "react-spinners/PropagateLoader";
 import {
   Row,
   Col,
 } from "reactstrap";
-import CarDataFormModal from "views/generalpages/zminotpage/CarDataFormModal";
-import CarDataFormModalDelete from "views/generalpages/zminotpage/CarDataFormModalDelete";
+import CarDataFormModal from "views/general/zminotpage/CarDataFormModal";
+import CarDataFormModalDelete from "views/general/zminotpage/CarDataFormModalDelete";
 import CarDataFilter from 'components/bazak/Filters/CarDataFilter';
-import LatestUpdateDateComponent from 'components/bazak/LatestUpdateDateComponent/LatestUpdateDateComponent';
 //redux
 import { useSelector, useDispatch } from 'react-redux'
 import { getCarDataFunc, findcardatabyidandupdateFunc, findcardatabyidanddeleteFunc } from 'redux/features/cardata/cardataSlice'
@@ -831,7 +830,6 @@ const SortingTable = (props) => {
 
           <Row>
             <Col xs={12} md={6} style={{ textAlign: 'right', left: (user.role == '0' || user.role == '1') && (user.site_permission == undefined || user.site_permission == 'צפייה ועריכה') ? '20rem': '11.5rem', marginTop: '1rem' }}>
-              <LatestUpdateDateComponent cardatas={data} isdataloaded={isdataloaded} />
             </Col>
           </Row>
           <Row>
