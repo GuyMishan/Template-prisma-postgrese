@@ -7,9 +7,3 @@
 /backend/node_modules
 /backend/package-lock.json
 
-/backend/frontend/build
-/backend/frontend/node_modules
-/backend/frontend/package-lock.json
-/backend/frontend/.vscode
-/backend/frontend/.eslintcache
-
