@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Router, Route, Switch, Redirect, withRouter } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import history from './history'
 
 //redux
