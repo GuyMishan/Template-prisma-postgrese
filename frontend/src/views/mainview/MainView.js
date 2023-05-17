@@ -18,10 +18,23 @@ import {
 import axios from 'axios';
 
 function MainView(props) {
+  const [state, setState] = useState([])
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/users')
+      .then(res => {
+        setState(res.data);
+        console.log(res.data);
+      })
+  }, [])
 
   return (
-    <div style={{textAlign:'center' }}>
-     gggf
+    <div style={{ textAlign: 'center' }}>
+      {state.length > 0 ? state.map((user) => {
+        return (
+          <h1>{user.name}</h1>
+        )
+      }) : null}
     </div>
   );
 }
